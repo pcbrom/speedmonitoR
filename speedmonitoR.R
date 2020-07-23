@@ -5,6 +5,7 @@
 # sudo apt-get install speedtest-cli
 # depois crie um inicializador para carregar 
 # no arranque do sistema
+# qualquer dúvida entre em contato: pcbrom@gmail.com
 ###############################################################################
 
 setwd('/home/XXXXXX')
