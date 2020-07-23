@@ -7,4 +7,5 @@
 Em debian e derivados use:
 
 sudo apt-get install speedtest-cli
+
 depois crie um inicializador para carregar no arranque do sistema
