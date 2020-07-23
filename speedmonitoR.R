@@ -9,6 +9,7 @@
 ###############################################################################
 
 setwd('/home/XXXXXX')
+if (file.exists('speedmonitoR.Rout')) file.remove('speedmonitoR.Rout')
 while (TRUE) {
   db <- read.csv2('resultados.csv', colClasses = c('character', 'character', 'character'))
   tp <- as.character(Sys.time())
@@ -21,9 +22,8 @@ while (TRUE) {
     dl = ul = NA
   }
   tmp <- cbind.data.frame(ping, dl, ul, tp)
-  cat('ping:', tmp[[1]], 'dl:', tmp[[2]], 'ul:', tmp[[3]], 'tp:', tmp[[4]])
+  cat('\n', 'ping:', tmp[[1]], 'dl:', tmp[[2]], 'ul:', tmp[[3]], 'tp:', tmp[[4]])
   db <- rbind.data.frame(db, tmp)
   write.csv2(db, 'resultados.csv', row.names = F)
-  if (file.exists('speed_monitor.Rout')) file.remove('speed_monitor.Rout')
   Sys.sleep(900)
 }
